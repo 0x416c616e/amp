@@ -1,0 +1,144 @@
+MAINTENANCE.SH CHANGELOG
+# ================================
+# VERSION 0.2a_october_9_2015 INFO:
+# added extra text art and text color stuff to make it a little more interesting
+# changed apt flags so no longer need to press Y to confirm
+# added rkhunter stuff to update and run rkhunter
+# added version notes
+# added version number
+# made rkhunter not require keypresses
+# now displays number of lines in program
+# lots of additional ascii art
+# randomly picks one of five types of text art
+# complete with color and all
+# added text art for antivirus thing too
+# decided to make it a little more interesting because why not
+# gotta have a little fun with it
+# otherwise this whole project would be incredibly boring
+# ================================
+# 
+# 
+# ==================
+# VERSION 0.2a_october_9_2015-2 INFO:
+# changed the order of rkhunter and clamav
+# clamav stuff takes the longest so I made rkhunter go first
+# changed timing on a few different things - increased sleep duration
+# sleep duration change makes it easier to read output before it flies by
+# ==================
+# 
+# 
+# 
+# =========================
+# VERSION 0.3a_october_10_2015 INFO:
+# removed the echo stuff about clamscanFunction
+# uncommented clamscanFunction
+# removed testing/demoing stuff
+# now it's back to being fully functional
+# =========================
+# 
+# 
+# 
+# 
+# =====================~
+# VERSION 0.4a_october_18_2015 INFO:
+# added a couple comments here and there (documentation is very important)
+# added speedtest functionality
+# added network info function
+# added variables (modemAddress and defaultGatewayAddress) for ping stuff (not yet implementedo)
+# added function for displaying information about the above variables,
+# which will be used for debugging purposes once I actually get around to implementing the
+# variable substitution stuff for the ping test functions
+# --
+# idea for thing to add in next version:
+# changing hard-coded addressing stuff for networking things
+# to variables which can be changed easily so that they don't
+# need to replaced every single time in the script
+# made networkInfoEcho function and variables "defaultGatewayAddress
+# and "modemAddress"
+# --
+# 
+# more stuff I actually did change in this version though
+# updated dependencies to include speedtest-cli
+# updated to-do list
+# added comments to final function invocation at near end of file
+# added comments about changing colors for a terminal with a black
+# background because currently this script is designed for a terminal
+# window with black text on a white background but some of the text
+# is specified as black so that won't really work on a black
+# background I think
+# be sure to read all these change notes and all the previous ones as well
+# and back it up
+# =====================~
+# 
+# 
+# 
+# 
+# 
+# ~~~~~~~~~~~~~~~~~~~~~
+# VERSION 0.5a_october_24_2015 INFO:
+# added echo lines to noteText function about using ctrl + c to exit program
+# checked that the speedtest function was invoked (and it is, I just forgot)
+# fixed typo in ending to-do comments
+# added more ideas to to-do list of features to add (including debug mode
+# for invoking user-specified functions and then exiting rather than
+# proceeding with the rest of the usual program)
+# made master function but have not done the debug stuff or if/read etc
+# basically just put all normal function calls into a single function
+# and then made a function call for the function call function
+# and it's called MasterProductionFunction
+# because production is differentiated from debug/testing
+# and I will make some debug features later
+#  
+# added echo lines about how the network ping variable stuff hasn't been
+# implemented yet even though I kind of implied that it had been 
+# ~~~~~~~~~~~~~~~~~~~~
+# 
+# 
+# 
+# @@@@@@@@@@@@@@@
+# VERSION 0.6a_november_15_2015 INFO:
+# noticed how the system I originally made this script for had black text
+# on a white background, whereas I normally do white text on a black background
+# for my own machines, so the black text which I colorized made it look bad
+# like it was a different shade of black than the background but it was still
+# super low contrast so now I added an if/elif/else statement that checks to
+# see what the value of a var called "TEXTCOLOR" is called
+# if it's BLACK then the regular text will be black (not counting the extra colorization)
+# if it's WHITE then the regular text will be white (again, not counting special cases)
+# replaced ping functions with multi-array iteration thingamajig (ping_test function)
+# ping_test replaces the now-removed ping tests (use diff on backups if you want to view)
+# ping_test should be invoked in MasterProductionFunction
+# made function for errors, exit_message
+# any error should then invoke exit_message and set a value for error_value 
+# @@@@@@@@@@@@@@@
+# 
+# April 2nd/3rd 2016:
+# updated version number
+# moved change log to dedicated file
+# moved to-do list to dedicated file
+# made backup of maintenance script
+# moved maintenance files into dedicated subfolder of shell scripts folder of programming folder
+# tested key_time_test.sh for something
+# added debug mode, which should be firstly started in the (semi-blank) debugModeMenu function
+# added debugKeyPress function, which uses the key_time_test.sh code to determine if the user want to enter debug mode
+# added some text about debug mode choices
+# disabled but then reenabled the speedtestCheck function because it appears to work now
+# changed bannerFunctionNew to reflect the new state of the changelog and to-do list
+# changed prettyLoader to say "proceeding" instead of "ok" so you don't get the wrong idea
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 

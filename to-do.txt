@@ -1,0 +1,76 @@
+MAINTENANCE.SH TO-DO
+#make naming of variables and functions more consistent
+#change hard-coded ping stuff to variables in early part of script
+#option to toggle verbose output on or off
+#add test/debug mode where there's an if statement where
+#if DEBUGMODE == true or something
+#then echo debug choices
+#it will only invoke function based on "read" from user
+#and then exit the program before the other functions
+#perhaps I should load the other function invocations into a "master" function or something?
+#fix color stuff
+#refactor stuff
+#put certain things into arrays and then get rid of semi-repetitious functions?
+#better checking for rkhunter, clamav, and ping output -- sed/awk?
+#add more error messages for when things go wrong (this will be a long and arduous process)
+#^and I don't expect to do it soon or get it all done perfectly
+#just remember that this script is supposed to require no user key presses so it must be
+#made in such a way that failing after a certain point means that it will just exit the
+#program rather than requiring manual input or decision-making because I am writing this
+#program for someone who doesn't know a whole lot about computers or troubleshooting
+#so I need to keep it all simple and pretty automatic
+#make program write stuff to log -- not entire program output (unless verbose logging is enabled),
+#but just after certain points write little amounts of info to a log, maybe in /var/log?
+#get rid of excess comments, maybe put stuff into a release notes file instead?
+#read more tldp stuff and especially learn about arrays and all that jazz
+#add netstat -nt
+#look into debian unattended-updates
+#check cronjobs (log so user can check for suspicious stuff)
+#nmap self after determining own ip address
+#dff for things
+#perform md5sum on self? to make sure maintenance script hasn't been altered
+#log that md5sum somewhere
+#come up with a real name for the project other than just "maintenance"
+#maybe invoke exit_message (maybe change name to error_message) but change it to prompt the user
+#to choose whether to exit or to continue with the error anyway
+#use df to check to see how much free space is available and issue an alert if there isn't very much
+#add fsck functionality?
+#add bleachbit to maintenance but make certain things togglable with a var in case some people don't want to delete stuff
+#bleachbit can be used via cli instead of gui even though it has one
+#use "w -i" instead of just w
+#use "last -i" instead of just last
+#refactor bannerFunctionNew
+#see also: https://stackoverflow.com/questions/59895/can-a-bash-script-tell-what-directory-its-stored-in
+#to solve the "this program is currently 0 lines" issue
+#also use getopts for script options for certain things (setting different modes or vars like the router default gateway, modem address, including/excluding certain modules, text color, etc)
+#add rkhunter --propupd after --update and before running -c --sk
+#output log to /var/log/maintenance.log?
+#name it ALMS - Alan's Linux Maintenance Script
+
+# TO-DO (not release notes) for april 3rd 2016:
+# all of the above stuff might be valid but it's old so it might not be valid idk
+# Add error return status and logging to a (user-specifiable) log file?
+# Make a config file too?
+# add error-checking for pinging, speedtest, scans, etc
+# logging output of important functions with tee
+https://unix.stackexchange.com/questions/80707/how-to-output-text-to-both-screen-and-file-inside-a-shell-script
+# give summary at the end which reads the log and also tells the user where it is if they want to view it later
+# Read through other scripts
+# Read through to-do and change logs in this script
+# Move changelog, to-do, and etc to separate text file
+# Fix documentation stuff
+# Make it more idiomatic?
+# Watch theurbanpenguin video tutorials for bash
+# read through older stuff in maintenance things
+
+#TO-DO for march 8th 2017:
+#virustotal scanner option
+#GUI
+#get rid of speedtest-cli and rkhunter
+#troubleshooting features (i.e. flowcharting/clicking yes or no for things and giving advice on what to do for the computer)
+#--->"I'm having a problem with my (router) (modem) (desktop) (laptop) (general networking) (not sure) <- user clicks buttons and
+#------>goes through what is basically a flowchart but in programming form
+#port the software to macOS, other Linux distros, maybe even Windows and even Android???? 
+#COME UP WITH A BETTER NAME FOR IT
+#switch out rkhunter for lynis?????
+
